@@ -1,12 +1,12 @@
 #!/usr/bin/env node
+'use strict';
 
-const fs = require('fs')
-const rc = require('rc')
-const dgram = require('dgram')
-const packet = require('native-dns-packet')
-const wildcard = require('wildcard2')
-
-const util = require('./util.js')
+const fs = require('fs');
+const rc = require('rc');
+const dgram = require('dgram');
+const packet = require('native-dns-packet');
+const wildcard = require('wildcard2');
+const util = require('./util.js');
 
 const defaults = {
   port: 53,
@@ -25,7 +25,7 @@ const defaults = {
   },
   fallback_timeout: 350,
   reload_config: true
-}
+};
 
 let config = rc('dnsproxy', defaults)
 
